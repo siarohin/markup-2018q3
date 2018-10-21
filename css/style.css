@@ -639,11 +639,6 @@ div.aqua .icons { background: #1abc9c; }
 }
 
 .comments .quote {
-	display: flex;
-	display: -webkit-flex;
-	justify-content: space-between;
-	flex-direction: column;
-	justify-content: center;
 	height: 190px;
 	font: 1em 'Regular', 'Myriad Pro', sans-serif;
   	color: #fff;
@@ -659,6 +654,23 @@ div.aqua .icons { background: #1abc9c; }
 	margin-top: 1em;
 }
 
-.comments .quote p:last-child::after {
-	/*content: " | ";*/
+.comments .quote p:last-child::before {
+	content: " — ";
+}
+
+/* functions */
+#functions {
+	width: 100%;
+	height: 340px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.functions {
+	max-width: 1600px;
+	height: 340px;
+  	margin: 0 auto;
+  	padding: 0 12.5%;
+  	font: 1em 'Regular', 'Myriad Pro', sans-serif;
+  	color: #7e7e7e;
 }
