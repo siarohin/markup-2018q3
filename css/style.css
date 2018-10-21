@@ -1,4 +1,5 @@
 @import url('normalized.css');
+@import url('slider.css');
 
 /* Fonts */
 @font-face {
@@ -592,7 +593,7 @@ div.aqua .icons { background: #1abc9c; }
 }
 
 .right-container .item h3 {
-	font: 1.1em 'Bols', 'Myriad Pro', sans-serif;
+	font: 1em 'Bold', 'Myriad Pro', sans-serif;
 	color: #303030;
 	margin-top: 1em;
 }
@@ -612,4 +613,52 @@ div.aqua .icons { background: #1abc9c; }
 	-webkit-transition-duration: 0.3s;
   	-moz-transition-duration: 0.3s;
   	transition-duration: 0.3s;
+}
+
+/* comments */
+#comments {
+	width: 100%;
+	height: 190px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.comments-bg {
+	width: 100%;
+	height: 190px;
+	background-color: #000;
+}
+
+.comments {
+	max-width: 1600px;
+	background: url('../images/comments_bg.jpg') 0 0 no-repeat;
+	background-size: cover;
+	height: 190px;
+  	margin: 0 auto;
+  	padding: 0 22.5%;
+}
+
+.comments .quote {
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+	flex-direction: column;
+	justify-content: center;
+	height: 190px;
+	font: 1em 'Regular', 'Myriad Pro', sans-serif;
+  	color: #fff;
+  	line-height: 1.5em;
+}
+
+.comments .quote p:first-child::before, .comments .quote p:first-child::after {
+	content: "\"";
+}
+
+.comments .quote p:last-child {
+	font: 1em 'Bold', 'Myriad Pro', sans-serif;
+	margin-top: 1em;
+}
+
+.comments .quote p:last-child::after {
+	/*content: " | ";*/
 }
