@@ -269,7 +269,11 @@ h1 {
   border: 0 !important;
 }
 
+<<<<<<< Updated upstream
+.d-table > div > select::-ms-expand {
+=======
 select::-ms-expand {
+>>>>>>> Stashed changes
     display: none;
 }
 
@@ -971,10 +975,12 @@ div.aqua .icons { background: #1abc9c; }
 	content: "\f095";
 	font: 1em 'FontAwesome', 'Myriad Pro', sans-serif;
 	margin-right: 0.5em;
+	white-space: nowrap;
 }
 
 .email::before {
 	content: "\f0e0";
 	font: 1em 'FontAwesome', 'Myriad Pro', sans-serif;
 	margin-right: 0.5em;
+	white-space: nowrap;
 }
