@@ -499,6 +499,52 @@ div.aqua .icons { background: #1abc9c; }
   font-size: 2em;
 }
 
+/* start-icons-mask */
+.yellow > .icons-box .icons::before {
+	content: "";
+	width: 48px;
+	height: 102px;
+	background: #fff;
+	position: absolute;
+	z-index: -1;
+	top: 0px;
+	left: 0px;
+}
+
+.yellow > .icons-box .icons::after {
+	content: "";
+	width: 52px;
+	height: 48px;
+	background: #fff;
+	position: absolute;
+	z-index: -1;
+	top: 54px;
+	left: 48px;
+}
+
+.gray > .icons-box .icons::before {
+	content: "";
+	width: 48px;
+	height: 102px;
+	background: #fff;
+	position: absolute;
+	z-index: -1;
+	top: 0px;
+	left: -2px;
+}
+
+.red > .icons-box .icons::before {
+	content: "";
+	width: 52px;
+	height: 52px;
+	background: #fff;
+	position: absolute;
+	z-index: -1;
+	top: 0px;
+	left: -2px;
+}
+/* end-icons-mask */
+
 .icons-box .icons > .icon {
 	width: 76px;
   height: 76px;
