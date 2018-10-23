@@ -1,6 +1,7 @@
 @import url('normalized.css');
 @import url('slider.css');
 
+
 /* Fonts */
 @font-face {
 	font-family: 'Bold';
@@ -266,7 +267,18 @@ h1 {
   width: 70px;
   height: 50px;
   margin: 0;
-  padding: 0 10px;
+  padding: 0 0 0 10px;
+  -ms-appearance: none;
+  appearance: none !important;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: 0 !important;
+}
+
+
+.d-table > div > select::-ms-expand {
+    display: none;
+  	padding: 0 10px;
 }
 
 /* domain-prices */
@@ -346,7 +358,6 @@ h1 {
 	-webkit-box-shadow: 0px 14px 19px -3px rgba(236,236,236,1);
 	-moz-box-shadow: 0px 14px 19px -3px rgba(236,236,236,1);
 	box-shadow: 0px 14px 19px -3px rgba(236,236,236,1);
-
 }
 
 div.yellow { border-top: 5px solid #f9d423; }
@@ -463,6 +474,21 @@ div.aqua .icons { background: #1abc9c; }
   transition-duration: 0.3s;
 }
 
+.packages-flexy-box > .yellow:hover,
+.packages-flexy-box > .gray:hover,
+.packages-flexy-box > .red:hover,
+.packages-flexy-box > .aqua:hover {
+	-webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.packages-flexy-box > .packages-box, .packages-flexy-box > .packages-box:hover {
+	-webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
 /* icon-box */
 .icons-box {
 	height: 70px;
@@ -484,6 +510,52 @@ div.aqua .icons { background: #1abc9c; }
   text-align: center;
   font-size: 2em;
 }
+
+/* start-icons-mask */
+.yellow > .icons-box .icons::before {
+	content: "";
+	width: 48px;
+	height: 102px;
+	background: #fff;
+	position: absolute;
+	z-index: -1;
+	top: 0px;
+	left: 0px;
+}
+
+.yellow > .icons-box .icons::after {
+	content: "";
+	width: 52px;
+	height: 48px;
+	background: #fff;
+	position: absolute;
+	z-index: -1;
+	top: 54px;
+	left: 48px;
+}
+
+.gray > .icons-box .icons::before {
+	content: "";
+	width: 48px;
+	height: 102px;
+	background: #fff;
+	position: absolute;
+	z-index: -1;
+	top: 0px;
+	left: -2px;
+}
+
+.red > .icons-box .icons::before {
+	content: "";
+	width: 52px;
+	height: 52px;
+	background: #fff;
+	position: absolute;
+	z-index: -1;
+	top: 0px;
+	left: -2px;
+}
+/* end-icons-mask */
 
 .icons-box .icons > .icon {
 	width: 76px;
@@ -908,10 +980,12 @@ div.aqua .icons { background: #1abc9c; }
 	content: "\f095";
 	font: 1em 'FontAwesome', 'Myriad Pro', sans-serif;
 	margin-right: 0.5em;
+	white-space: nowrap;
 }
 
 .email::before {
 	content: "\f0e0";
 	font: 1em 'FontAwesome', 'Myriad Pro', sans-serif;
 	margin-right: 0.5em;
+	white-space: nowrap;
 }
