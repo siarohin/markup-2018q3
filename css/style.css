@@ -183,10 +183,11 @@ h1 {
 /* domain-table */
 .d-table {
 	display: table;
-	border-collapse: collapse;
+	border-collapse: separate;
+	border-spacing: 0 9px;
 	margin: 0 auto;
 	width: 65%;
-	height: 50px;
+	height: 40px;
 	border: 1px solid #d9d9d9;
 }
 
@@ -197,7 +198,7 @@ h1 {
 	padding: 0 18px;
 }
 
-.d-table > div:nth-child(3) { text-align: left; }
+.d-table > div:nth-child(3) { text-align: left; border-right: none;}
 
 .d-table > div {
 	display: table-cell;
@@ -242,7 +243,7 @@ h1 {
   cursor: pointer;
   background: url('../images/arrow.png') right no-repeat;
   width: 70px;
-  height: 50px;
+  height: 36px;
   margin: 0;
   padding: 0 0 0 10px;
   -ms-appearance: none;
