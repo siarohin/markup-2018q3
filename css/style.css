@@ -262,7 +262,8 @@ h1 {
 /* domain-prices */
 .d-prices {
 	display: table;
-	border-collapse: collapse;
+	border-collapse: separate;
+	border-spacing: 7px;
 	margin: 0 auto;
 	width: 65%;
 	height: 160px;
@@ -272,14 +273,32 @@ h1 {
 
 .d-row { display: table-row; }
 .d-row > div:first-child { text-transform: uppercase; }
-.d-row > div { border: 1px solid #d9d9d9; }
+.d-row:first-of-type > div { border-bottom: 1px solid #d9d9d9; }
+.d-row::before, .d-row::after { content: ''; }
+.d-row > div { border-right: 1px solid #d9d9d9; }
+.d-row > div:last-child { border-right: none; }
+
+.d-row:first-of-type > div::after { /* <-- paint round decorator */
+	content: '';
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #fff;
+	position: absolute;
+	right: -5px;
+	bottom: -5px;
+	z-index: 20;
+}
+
+.d-row:first-of-type > div:last-child::after { width: 0; height: 0; } /* <-- reset last decorator */
 
 .d-row > div {
 	display: table-cell;
+	position: relative;
 	font: 0.8em 'Regular', 'Myriad Pro', sans-serif;
 	vertical-align: middle;
-	width: 12.5%;
-	height: 80px;
+	width: 24.5%;
+	height: 70px;
 }
 
 /* packages */
