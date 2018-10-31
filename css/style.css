@@ -594,6 +594,16 @@ div.aqua .icons { background: #1abc9c; }
 	border-right: 2px dotted #d8d8d8;
 	overflow: hidden;
 	max-height: 220px; /* <-- safe cut size */
+	margin-top: -30px;
+}
+
+.left-container:before {
+	content: ' ';
+  display: block;
+  height: 30px;
+  top: 198px;
+  position: relative;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #fff 75%)
 }
 
 .right-container {
@@ -655,6 +665,21 @@ div.aqua .icons { background: #1abc9c; }
 }
 
 .right-container .item a:hover { color: #1f89ba; }
+
+.right-container .item h3, .right-container .item p {
+	white-space: nowrap;
+	overflow: hidden;
+	position: relative;
+}
+
+.right-container .item h3::after, .right-container .item p::after {
+	content: '';
+	position: absolute;
+	right: 0; top: 0;
+	width: 20px;
+	height: 100%;
+	background-image:linear-gradient(to right, rgba(255, 255, 255, 0), #fff 75%)
+}
 
 /* comments */
 #comments, .comments-bg, .comments, .comments .quote { height: 190px; }
