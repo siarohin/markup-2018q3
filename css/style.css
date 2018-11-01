@@ -39,7 +39,7 @@ body {
 	min-width: 900px;
 }
 
-h1 {
+.header-text h1, .header-text h2 {
 	font: 4.5em 'Myriad Pro', sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -79,6 +79,15 @@ h1 {
 }
 
 .logo { width: 40%; }
+.logo a { z-index: 10; }
+.logo h1 { z-index: 9; margin: 1px 0 0 12px; }
+.logo a, .logo h1 {
+	position: absolute;
+	left: 12.5%;
+	top: 27px;
+	color: #000;
+	font: 1.5em 'Bold', 'Myriad Pro', sans-serif;
+	}
 
 .menu {
 	width: 60%;
