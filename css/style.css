@@ -731,7 +731,8 @@ div.aqua .icons { background: #1abc9c; }
 	padding: 0;
 }
 
-#functions h2, h3 {
+#functions h2, h3,
+#functions div a:last-of-type {
 	font: 1.1em 'Bold', 'Myriad Pro', sans-serif;
 	color: #303030;
 	margin: 0.8em 0;
@@ -772,7 +773,7 @@ div.aqua .icons { background: #1abc9c; }
   transition-duration: 0.3s;	
 }
 
-.functions-flexy-box div a {
+.functions-flexy-box div a:first-of-type {
  	width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -785,7 +786,7 @@ div.aqua .icons { background: #1abc9c; }
   text-decoration: none; 
 }
 
-.functions-flexy-box div a:hover {
+.functions-flexy-box div a:first-of-type:hover {
 	-webkit-transform: scale(0.6,0.6);
 	transform: scale(0.6,0.6);
 	-moz-transform: scale(0.6,0.6);
@@ -794,6 +795,14 @@ div.aqua .icons { background: #1abc9c; }
 	transition-timing-function: ease-out;
 	-moz-transition-timing-function: ease-out;
 }
+
+#functions div a:last-of-type {
+	display: block;
+	text-decoration: none;
+	background: none !important;
+}
+
+#functions div a:last-of-type:hover { background: none !important; opacity: 0.8; }
 
 /* footer */
 #footer {
